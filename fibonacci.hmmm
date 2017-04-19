@@ -1,0 +1,20 @@
+#Robert Frusina
+#I pledge my honor that I have abided by the stevens honor system
+
+0	read r15	#place user input into register 15
+1	jeqzn r15 16	#test for 0, if so jump to 16
+2	setn r1 0	#register 1 is set to 0
+3	setn r2 1	#register 2 is set to 1
+4	write r1 	#print r1 contents
+5	addn r15 -1	#subtract 1 from register 15
+6	jeqzn r15 16	#test for 0, if so jump to 16
+7	write r2 	#print register 2 contents
+8	addn r15 -1	#subtract 1 from register 15
+9	jeqzn r15 16	#test for 0, if so jump to 16
+10	add r4 r1 r2	#set reister 4 to r1+r2
+11	write r4 	#print contents of register 4
+12	copy r1 r2	#copy r2 values into r1
+13	copy r2 r4	#copy r4 values into r2
+14	addn r15 -1	#subtract 1 from register 15
+15	jumpn 9		#program counter set to 9
+16	halt
